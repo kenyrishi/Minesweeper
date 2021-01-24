@@ -1,2 +1,3 @@
 # Minesweeper
-Minesweeper in Python using pygame
+Minesweeper in Python using pygame and tkinter.
+
