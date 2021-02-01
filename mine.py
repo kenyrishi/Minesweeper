@@ -191,7 +191,8 @@ def winningScreen():
     if MsgBox == 'yes':
         main()
     else:
-        sys.exit()
+        pygame.quit()
+        #sys.exit()
 
 
 def showMines():
@@ -217,7 +218,8 @@ def losingScreen():
     if MsgBox == 'yes':
         main()
     else:
-        sys.exit()
+        pygame.quit()
+        #sys.exit()
                     
 if __name__ == "__main__":
     main()
