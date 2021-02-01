@@ -4,6 +4,10 @@ import sys
 from tkinter import *
 from tkinter import messagebox
 
+#easy          size = 9   mines = 10
+#intermediate  size = 16  mines = 40
+#expert        size = 22  mines = 100
+
 size = 10
 window_size = 600
 grid_size = window_size//size
