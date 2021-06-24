@@ -8,15 +8,16 @@ from tkinter import messagebox
 #intermediate  size = 16  mines = 40
 #expert        size = 22  mines = 100
 
-size = 10
+size = 15
 window_size = 600
 grid_size = window_size//size
-mines = 10
+mines = 40
 
 
 white = (255,255,255)
 black = (0,0,0)
-green = (20,200,20)
+brown = (255,155,55)
+green = (50,200,50)
 gray = (140,140,140)
 
 
@@ -81,7 +82,7 @@ def boardOverlay():
         for y in range(window_size//grid_size):
             rect = pygame.Rect(x*grid_size,y*grid_size,
                                grid_size,grid_size)
-            pygame.draw.rect(screen,gray,rect)
+            pygame.draw.rect(screen,green,rect)
             pygame.draw.rect(screen,black,rect,1)
             
 
@@ -165,7 +166,7 @@ def drawNum(x,y,square):
         
     rect = pygame.Rect(x*grid_size+1,y*grid_size+1,
                         grid_size-2,grid_size-2)
-    pygame.draw.rect(screen,white,rect)
+    pygame.draw.rect(screen,brown,rect)
     
     textsurface = num_font.render(num, False, black)
     screen.blit(textsurface,((x+0.3)*grid_size,(y+0.1)*grid_size))
@@ -205,11 +206,11 @@ def showMines():
             if full[i][j] == -1:
                 
                 r = pygame.Rect(i*grid_size,j*grid_size,grid_size,grid_size)
-                pygame.draw.rect(screen,gray,r)
+                pygame.draw.rect(screen,green,r)
                 pygame.draw.rect(screen,black,r,1)
                 
                 textsurface = num_font.render("*", False, black)
-                screen.blit(textsurface,((i+0.3)*grid_size,(j+0.1)*grid_size))
+                screen.blit(textsurface,((i+0.4)*grid_size,(j+0.2)*grid_size))
                 pygame.display.update()
                 pygame.time.wait(250)
     losingScreen()
