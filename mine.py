@@ -212,7 +212,7 @@ def showMines():
                 textsurface = num_font.render("*", False, black)
                 screen.blit(textsurface,((i+0.4)*grid_size,(j+0.2)*grid_size))
                 pygame.display.update()
-                pygame.time.wait(250)
+                pygame.time.wait(150)
     losingScreen()
                 
 
@@ -224,7 +224,7 @@ def losingScreen():
         main()
     else:
         pygame.quit()
-        #sys.exit()
+        sys.exit()
                     
 if __name__ == "__main__":
     main()
