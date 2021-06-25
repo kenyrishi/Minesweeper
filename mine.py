@@ -18,6 +18,7 @@ white = (255,255,255)
 black = (0,0,0)
 brown = (255,155,55)
 green = (50,200,50)
+red = (255,0,0)
 gray = (140,140,140)
 
 
@@ -206,7 +207,7 @@ def showMines():
             if full[i][j] == -1:
                 
                 r = pygame.Rect(i*grid_size,j*grid_size,grid_size,grid_size)
-                pygame.draw.rect(screen,green,r)
+                pygame.draw.rect(screen,red,r)
                 pygame.draw.rect(screen,black,r,1)
                 
                 textsurface = num_font.render("*", False, black)
